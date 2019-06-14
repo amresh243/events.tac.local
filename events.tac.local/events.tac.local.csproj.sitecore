@@ -1,0 +1,9 @@
+﻿<Project>
+  <PropertyGroup>
+    <Site Server="http://sc9l.sitecore/" UserName="sitecore\amresh" IsRemoteSitecore="False" />
+  </PropertyGroup>
+  <File Include="Views\Events\Layouts\Events.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0" />
+  <File Include="/Views/Events/Layouts/Events.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+    <Item DatabaseName="master">{2FFABBDF-8D53-4A03-8296-95D9A4C785A2}</Item>
+  </File>
+</Project>
