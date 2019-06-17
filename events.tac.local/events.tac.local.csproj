@@ -105,8 +105,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\EventDetailController.cs" />
     <Compile Include="Controllers\EventIntroController.cs" />
+    <Compile Include="Controllers\EventListController.cs" />
+    <Compile Include="Models\EventDetail.cs" />
     <Compile Include="Models\EventIntro.cs" />
+    <Compile Include="Models\EventList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -158,9 +162,17 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\Navigation.js" />
     <Content Include="Scripts\Sitecore.Foundation.Theming.min.js" />
+    <Content Include="Views\Events\EventDetail\Index.cshtml" />
+    <Content Include="Views\Events\EventList\Index.cshtml" />
     <Content Include="Views\Events\EventIntro\Index.cshtml" />
+    <Content Include="Views\Events\FeaturedEvent.cshtml" />
+    <Content Include="Views\Events\HomeContent.cshtml" />
     <Content Include="Views\Events\Layouts\Events.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Events\One-Column.cshtml" />
+    <Content Include="Views\Events\PageContent.cshtml" />
+    <Content Include="Views\Events\SideContent.cshtml" />
+    <Content Include="Views\Events\Two-Column.cshtml" />
+    <Content Include="Views\Events\FeatureRow.cshtml" />
     <Content Include="Views\web.config" />
     <Content Include="Css\bower_components\bootstrap-sass\assets\fonts\bootstrap\glyphicons-halflings-regular.eot" />
     <Content Include="Css\bower_components\bootstrap-sass\assets\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
@@ -229,7 +241,6 @@
     <Content Include="Fonts\open-sans-v13-latin-regular.woff" />
     <Content Include="Fonts\open-sans-v13-latin-regular.woff2" />
     <None Include="packages.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -244,7 +255,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Shared\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
