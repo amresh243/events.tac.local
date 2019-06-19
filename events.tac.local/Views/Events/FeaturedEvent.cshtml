@@ -4,9 +4,13 @@
 @model RenderingModel
 
 <div class="thumbnail well @Model.Rendering.Parameters["CssClass"]">
-  @{ string eventUrl = @Sitecore.Links.LinkManager.GetItemUrl(RenderingContext.Current.ContextItem); }
+  @{
+    //string eventUrl = @Sitecore.Links.LinkManager.GetItemUrl(RenderingContext.Current.ContextItem);
+    string eventUrl = @Sitecore.Links.LinkManager.GetItemUrl(Model.Item);
+  }
+
   <a href="@eventUrl">
-    @Html.Sitecore().Field("EventImage", new { @class="img-responsive", mw=500, mh = 333})
+    @Html.Sitecore().Field("EventImage", new { @class = "img-responsive", mw = 500, mh = 333 })
   </a>
   <div class="caption">
     <h3 class="teaser-heading">@Html.Sitecore().Field("ContentHeading")</h3>

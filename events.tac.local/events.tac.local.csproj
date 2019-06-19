@@ -105,12 +105,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\BreadcrumbBuilder.cs" />
+    <Compile Include="Controllers\BreadcrumbController.cs" />
     <Compile Include="Controllers\EventDetailController.cs" />
     <Compile Include="Controllers\EventIntroController.cs" />
     <Compile Include="Controllers\EventListController.cs" />
     <Compile Include="Models\EventDetail.cs" />
     <Compile Include="Models\EventIntro.cs" />
     <Compile Include="Models\EventList.cs" />
+    <Compile Include="Models\NavigationItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +165,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\Navigation.js" />
     <Content Include="Scripts\Sitecore.Foundation.Theming.min.js" />
+    <Content Include="Views\Events\Breadcrumb\Index.cshtml" />
     <Content Include="Views\Events\EventDetail\Index.cshtml" />
     <Content Include="Views\Events\EventList\Index.cshtml" />
     <Content Include="Views\Events\EventIntro\Index.cshtml" />
@@ -173,6 +177,7 @@
     <Content Include="Views\Events\SideContent.cshtml" />
     <Content Include="Views\Events\Two-Column.cshtml" />
     <Content Include="Views\Events\FeatureRow.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\web.config" />
     <Content Include="Css\bower_components\bootstrap-sass\assets\fonts\bootstrap\glyphicons-halflings-regular.eot" />
     <Content Include="Css\bower_components\bootstrap-sass\assets\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
@@ -241,6 +246,7 @@
     <Content Include="Fonts\open-sans-v13-latin-regular.woff" />
     <Content Include="Fonts\open-sans-v13-latin-regular.woff2" />
     <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -255,8 +261,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Views\Shared\" />
+    <ProjectReference Include="..\TAC.Sitecore.Abstractions\TAC.Sitecore.Abstractions.csproj">
+      <Project>{71417f51-8b93-4f15-a2bb-bb12fe286b24}</Project>
+      <Name>TAC.Sitecore.Abstractions</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

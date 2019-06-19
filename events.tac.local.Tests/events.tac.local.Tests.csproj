@@ -71,8 +71,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Test1.cs" />
+    <Compile Include="BreadcrumbBuilderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestTree.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -82,6 +83,10 @@
     <ProjectReference Include="..\events.tac.local\events.tac.local.csproj">
       <Project>{002CB957-498D-4485-9743-6032C415D0AC}</Project>
       <Name>events.tac.local</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TAC.Sitecore.Abstractions\TAC.Sitecore.Abstractions.csproj">
+      <Project>{71417f51-8b93-4f15-a2bb-bb12fe286b24}</Project>
+      <Name>TAC.Sitecore.Abstractions</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
