@@ -106,14 +106,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\BreadcrumbBuilder.cs" />
+    <Compile Include="Business\NavigationBuilder.cs" />
     <Compile Include="Controllers\BreadcrumbController.cs" />
     <Compile Include="Controllers\EventDetailController.cs" />
     <Compile Include="Controllers\EventIntroController.cs" />
     <Compile Include="Controllers\EventListController.cs" />
+    <Compile Include="Controllers\NavigationController.cs" />
     <Compile Include="Models\EventDetail.cs" />
     <Compile Include="Models\EventIntro.cs" />
     <Compile Include="Models\EventList.cs" />
     <Compile Include="Models\NavigationItem.cs" />
+    <Compile Include="Models\NavigationMenuItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -177,7 +180,7 @@
     <Content Include="Views\Events\SideContent.cshtml" />
     <Content Include="Views\Events\Two-Column.cshtml" />
     <Content Include="Views\Events\FeatureRow.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Events\Navigation\Index.cshtml" />
     <Content Include="Views\web.config" />
     <Content Include="Css\bower_components\bootstrap-sass\assets\fonts\bootstrap\glyphicons-halflings-regular.eot" />
     <Content Include="Css\bower_components\bootstrap-sass\assets\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
@@ -246,7 +249,6 @@
     <Content Include="Fonts\open-sans-v13-latin-regular.woff" />
     <Content Include="Fonts\open-sans-v13-latin-regular.woff2" />
     <None Include="packages.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

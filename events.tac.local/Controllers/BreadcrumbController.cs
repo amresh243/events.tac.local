@@ -21,7 +21,7 @@ namespace events.tac.local.Controllers
     // GET: Breadcrumb
     public ActionResult Index()
     {
-      return View(_builder.Build());
+      return View("~/Views/Events/Breadcrumb/Index.cshtml", _builder.Build());
     }
   }
 }
