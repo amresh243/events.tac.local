@@ -107,11 +107,13 @@
   <ItemGroup>
     <Compile Include="Business\BreadcrumbBuilder.cs" />
     <Compile Include="Business\NavigationBuilder.cs" />
+    <Compile Include="Business\RelatedEventsProvider.cs" />
     <Compile Include="Controllers\BreadcrumbController.cs" />
     <Compile Include="Controllers\EventDetailController.cs" />
     <Compile Include="Controllers\EventIntroController.cs" />
     <Compile Include="Controllers\EventListController.cs" />
     <Compile Include="Controllers\NavigationController.cs" />
+    <Compile Include="Controllers\RelatedEventsController.cs" />
     <Compile Include="Models\EventDetail.cs" />
     <Compile Include="Models\EventIntro.cs" />
     <Compile Include="Models\EventList.cs" />
@@ -177,6 +179,7 @@
     <Content Include="Views\Events\Layouts\Events.cshtml" />
     <Content Include="Views\Events\One-Column.cshtml" />
     <Content Include="Views\Events\PageContent.cshtml" />
+    <Content Include="Views\Events\RelatedEvents\Index.cshtml" />
     <Content Include="Views\Events\SideContent.cshtml" />
     <Content Include="Views\Events\Two-Column.cshtml" />
     <Content Include="Views\Events\FeatureRow.cshtml" />
