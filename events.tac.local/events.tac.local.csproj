@@ -182,6 +182,7 @@
     <Content Include="Views\Events\EventIntro\Index.cshtml" />
     <Content Include="Views\Events\EventsList\Index.cshtml" />
     <Content Include="Views\Events\FeaturedEvent.cshtml" />
+    <Content Include="Views\Events\FooterContent.cshtml" />
     <Content Include="Views\Events\HomeContent.cshtml" />
     <Content Include="Views\Events\Layouts\Events.cshtml" />
     <Content Include="Views\Events\One-Column.cshtml" />

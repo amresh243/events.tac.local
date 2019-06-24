@@ -1,29 +1,32 @@
-﻿using System.Collections.Generic;
+﻿using Sitecore.Data;
+using System.Collections.Generic;
 
 namespace TAC.Sitecore.Abstractions.Interfaces
 {
-    public interface IItem 
-    {
-        string DisplayName { get; }
+  public interface IItem
+  {
+    string DisplayName { get; }
 
-        string Name { get; }
+    string Name { get; }
 
-        string this[string fieldNameorID] { get; set; }
+    string this[string fieldNameorID] { get; set; }
 
-        string RenderField(string fieldNameOrID);
+    string RenderField(string fieldNameOrID);
 
-        string RenderField(string fieldNameOrID, string parameters);
+    string RenderField(string fieldNameOrID, string parameters);
 
-        IItem Parent { get; }
+    IItem Parent { get; }
 
-        IEnumerable<IItem> GetAncestors();
+    IEnumerable<IItem> GetAncestors();
 
-        bool IsAncestorOrSelf(IItem item);
+    bool IsAncestorOrSelf(IItem item);
 
-        string Url { get; }
+    string Url { get; }
 
-        IEnumerable<IItem> GetChildren();
+    ID TemplateID { get; }
 
-        IEnumerable<IItem> GetMultilistFieldItems(string fieldNameOrID);
-    }
+    IEnumerable<IItem> GetChildren();
+
+    IEnumerable<IItem> GetMultilistFieldItems(string fieldNameOrID);
+  }
 }

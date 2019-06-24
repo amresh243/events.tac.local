@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System;
 using Sitecore.Data.Fields;
 using Sitecore.Diagnostics;
+using Sitecore.Data;
 
 namespace TAC.Sitecore.Abstractions.SitecoreImplementation
 {
@@ -31,6 +32,8 @@ namespace TAC.Sitecore.Abstractions.SitecoreImplementation
     public string DisplayName => _item.DisplayName;
 
     public string Name => _item.Name;
+
+    public ID TemplateID => _item.TemplateID;
 
     public string Url => LinkManager.GetItemUrl(_item);
 

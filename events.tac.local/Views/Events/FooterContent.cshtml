@@ -1,0 +1,52 @@
+﻿@using Sitecore.Mvc
+
+@{
+  Sitecore.Data.Fields.ReferenceField mainitemfield = Model.Item.Fields["Main item"];
+  var mainitem = mainitemfield.TargetItem;
+  Sitecore.Data.Fields.MultilistField otherlinksfield = Model.Item.Fields["Other links"];
+  var otheritems = otherlinksfield.GetItems();
+}
+
+<footer>           
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8"> 
+        <!-- [About Us] -->				
+        <div class="well">
+          <h4>
+            @Html.Sitecore().Field("contentHeading", mainitem)
+          </h4>
+          <p>
+            @Html.Sitecore().Field("contentIntro", mainitem)
+          </p>
+        </div>
+        <!-- [/About Us] -->
+      </div>
+      <div class="col-md-4">
+        <!-- [Meta Navigation] -->
+        <ul class="nav nav-stacked">
+          @foreach(var otheritem in otheritems)
+          {
+            <li class="">
+              <a href="@Sitecore.Links.LinkManager.GetItemUrl(otheritem)">
+                @Html.Sitecore().Field("contentHeading", otheritem)
+              </a>
+            </li>
+          }
+        </ul>
+        <!-- [/Meta Navigation] -->
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">	
+          <small class="copyright">
+            <span style="line-height: 17.1428px;">@Html.Sitecore().Field("copyright")</span>
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
