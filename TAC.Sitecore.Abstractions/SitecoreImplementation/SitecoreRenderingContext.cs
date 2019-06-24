@@ -1,7 +1,6 @@
-﻿using Sitecore.Mvc.Presentation;
-using Sitecore;
+﻿using Sitecore;
+using Sitecore.Mvc.Presentation;
 using TAC.Sitecore.Abstractions.Interfaces;
-using System;
 
 namespace TAC.Sitecore.Abstractions.SitecoreImplementation
 {

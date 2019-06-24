@@ -77,6 +77,9 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="TAC.Utils">
+      <HintPath>..\libraries\TAC.Utils.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web.Razor">
@@ -106,20 +109,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\BreadcrumbBuilder.cs" />
+    <Compile Include="Business\EventsProvider.cs" />
     <Compile Include="Business\NavigationBuilder.cs" />
     <Compile Include="Business\RelatedEventsProvider.cs" />
     <Compile Include="Controllers\BreadcrumbController.cs" />
-    <Compile Include="Controllers\EventDetailController.cs" />
     <Compile Include="Controllers\EventIntroController.cs" />
-    <Compile Include="Controllers\EventListController.cs" />
+    <Compile Include="Controllers\EventsListController.cs" />
     <Compile Include="Controllers\NavigationController.cs" />
     <Compile Include="Controllers\RelatedEventsController.cs" />
-    <Compile Include="Models\EventDetail.cs" />
+    <Compile Include="Models\EventDetails.cs" />
     <Compile Include="Models\EventIntro.cs" />
-    <Compile Include="Models\EventList.cs" />
+    <Compile Include="Models\EventsList.cs" />
     <Compile Include="Models\NavigationItem.cs" />
     <Compile Include="Models\NavigationMenuItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Templates.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -175,9 +179,8 @@
     <Content Include="Scripts\Navigation.js" />
     <Content Include="Scripts\Sitecore.Foundation.Theming.min.js" />
     <Content Include="Views\Events\Breadcrumb\Index.cshtml" />
-    <Content Include="Views\Events\EventDetail\Index.cshtml" />
-    <Content Include="Views\Events\EventList\Index.cshtml" />
     <Content Include="Views\Events\EventIntro\Index.cshtml" />
+    <Content Include="Views\Events\EventsList\Index.cshtml" />
     <Content Include="Views\Events\FeaturedEvent.cshtml" />
     <Content Include="Views\Events\HomeContent.cshtml" />
     <Content Include="Views\Events\Layouts\Events.cshtml" />

@@ -6,10 +6,7 @@ namespace events.tac.local.Tests
   {
     private readonly ExpandoTestItemBuilder _b;
 
-    public TestTree() : this(new ExpandoTestItemBuilder())
-    {
-
-    }
+    public TestTree() : this(new ExpandoTestItemBuilder()) { }
 
     public TestTree(ExpandoTestItemBuilder builder)
     {

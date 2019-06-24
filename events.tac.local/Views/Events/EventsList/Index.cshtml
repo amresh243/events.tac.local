@@ -1,0 +1,30 @@
+﻿@using Sitecore.Mvc.Presentation
+@using events.tac.local.Models
+@using TAC.Utils.Helpers
+
+@model EventsList
+
+<div class="content-list newslist">
+  <ol class="media-list">
+    @{ string eventUrl = @Sitecore.Links.LinkManager.GetItemUrl(RenderingContext.Current.ContextItem); }
+    @foreach (var eventItem in Model.Events)
+    {
+      <li class="media media-align-middle">
+        <div class="media-left">
+          <a href="@eventUrl">@eventItem.EventImage</a>
+        </div>
+        <div class="media-body">
+          <h3 class="media-heading">
+            <a href="@eventUrl">@eventItem.ContentHeading</a>
+          </h3>
+          <div class="description">
+            <p>@eventItem.ContentIntro</p>
+          </div>
+        </div>
+        <div class="metadata well">@eventItem.StartDate.ToString("MMM dd, yyyy")</div>
+      </li>
+    }
+  </ol>
+</div>
+
+@Html.Pager(Model.PageSize, Model.TotalResultCount)
