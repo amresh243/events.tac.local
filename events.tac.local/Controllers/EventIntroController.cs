@@ -1,6 +1,7 @@
 ﻿using events.tac.local.Models;
 using Sitecore.Mvc.Presentation;
 using Sitecore.Web.UI.WebControls;
+using System;
 using System.Web;
 using System.Web.Mvc;
 
@@ -24,7 +25,7 @@ namespace events.tac.local.Controllers
         EventImage = new HtmlString(FieldRenderer.Render(item, "EventImage", "mw=400")),
         Highlights = new HtmlString(FieldRenderer.Render(item, "Highlights")),
         ContentIntro = new HtmlString(FieldRenderer.Render(item, "ContentIntro")),
-        StartDate = new HtmlString(FieldRenderer.Render(item, "StartDate")),
+        StartDate = Sitecore.DateUtil.ParseDateTime(item.Fields["StartDate"].Value, DateTime.Now),
         Duration = new HtmlString(FieldRenderer.Render(item, "Duration")),
         DifficultyLevel = new HtmlString(FieldRenderer.Render(item, "DifficultyLevel"))
       };

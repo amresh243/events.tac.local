@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using System;
+using System.Web;
 
 namespace events.tac.local.Models
 {
@@ -9,7 +10,7 @@ namespace events.tac.local.Models
     public HtmlString ContentBody { get; set; }
     public HtmlString EventImage { get; set; }
     public HtmlString Highlights { get; set; }
-    public HtmlString StartDate { get; set; }
+    public DateTime StartDate { get; set; }
     public HtmlString Duration { get; set; }
     public HtmlString DifficultyLevel { get; set; }
   }
