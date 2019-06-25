@@ -1,62 +1,13 @@
 ﻿@using Sitecore.Mvc
 @using Sitecore.Mvc.Presentation
-@using events.tac.local.Business
-@using events.tac.local.Helper
-@using Sitecore.Links
 
 @model RenderingModel
 
-  <header class="page-header">
-    <!-- [Homepage Carousell] -->
-    @{
-      var carousels = CarouselProvider.GetCarousels();
-      var eventProvider = new EventsProvider();
-      var events = eventProvider.GetEventsList(0);
-      var teasureEvent = eventProvider.GetTeasureEvent();
-      var teasureEventImage = teasureEvent.GetMediaUrl("EventImage");
-      var teasrueEventUrl = LinkManager.GetItemUrl(teasureEvent);
-      int carouselCount = 0;
-    }
-
-    <div id="carousel_1" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        @foreach (var carousel in carousels)
-        {
-          string activeClass = carousel.IsActive ? "active" : "";
-          <li data-target="#carousel_1" data-slide-to="@carouselCount.ToString()" class="@activeClass"></li>
-          carouselCount++;
-        }
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        @foreach (var carousel in carousels)
-        {
-          string activeClass = carousel.IsActive ? "item active" : "item";
-          <div class="@activeClass">
-            <div class="jumbotron jumbotron-xl bg-media" style="background-image: url(@carousel.Image)">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-12">
-                    <h1>@carousel.Title</h1>
-                    <p class="lead">@carousel.Intro</p>
-                    <a class="btn btn-hollow btn-lg" href="@carousel.Url">Read more</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        }
-      </div>
-      <a class="left carousel-control" href="#carousel_1" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#carousel_1" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-    <!-- [/Homepage Carousell] -->
-  </header>
+<header class="page-header">
+  <!-- [Homepage Carousell] -->
+  @Html.Sitecore().Placeholder("Carousel")
+  <!-- [/Homepage Carousell] -->
+</header>
 <section class="section section-full">
   <!-- [Featured Events] -->
   <div class="container">
@@ -64,45 +15,6 @@
   </div>
   <!-- [/Featured Events] -->
   <!-- [Upcoming Events] -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <div class="thumbnail">
-          <a href="@teasrueEventUrl">
-            <img src="@teasureEventImage" class="img-responsive" alt="Skiing in the Himalayas" width="500" height="333" />
-          </a>
-          <div class="caption">
-            <h3 class="teaser-heading">@Html.Sitecore().Field("ContentHeading", teasureEvent)</h3>
-            <p>
-              @Html.Sitecore().Field("ContentIntro", teasureEvent)
-            </p>
-            <a href="@teasrueEventUrl" class="btn btn-default">Read more</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="well bg-primary">
-          <h5 class="text-uppercase">Events</h5>
-          
-          <ul class="media-list">
-            @foreach (var eventItem in events.Events)
-            {
-              <li class="media">
-                <div class="media-body">
-                  @eventItem.StartDate.ToString("MMM dd, yyyy")
-                  <h4 class="media-heading">
-                    <a href="@LinkManager.GetItemUrl(Model.Item.Database.GetItem(eventItem.Path))">
-                      @eventItem.ContentHeading
-                    </a>
-                  </h4>
-                </div>
-              </li>
-            }
-          </ul>
-          <a href="~/Events" class="btn btn-default">Read more</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  @Html.Sitecore().Placeholder("UpcomingEvents")
   <!-- [/Upcoming Events] -->
 </section>

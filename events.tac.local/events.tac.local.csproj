@@ -114,6 +114,7 @@
     <Compile Include="Business\NavigationBuilder.cs" />
     <Compile Include="Business\RelatedEventsProvider.cs" />
     <Compile Include="Controllers\BreadcrumbController.cs" />
+    <Compile Include="Controllers\EventHomeController.cs" />
     <Compile Include="Controllers\EventIntroController.cs" />
     <Compile Include="Controllers\EventsListController.cs" />
     <Compile Include="Controllers\NavigationController.cs" />
@@ -182,12 +183,14 @@
     <Content Include="Scripts\Navigation.js" />
     <Content Include="Scripts\Sitecore.Foundation.Theming.min.js" />
     <Content Include="Views\Events\Breadcrumb\Index.cshtml" />
+    <Content Include="Views\Events\UpcomingEvents.cshtml" />
     <Content Include="Views\Events\EventIntro\Index.cshtml" />
     <Content Include="Views\Events\EventsList\Index.cshtml" />
     <Content Include="Views\Events\FeaturedEvent.cshtml" />
     <Content Include="Views\Events\FooterContent.cshtml" />
     <Content Include="Views\Events\EventTypes.cshtml" />
     <Content Include="Views\Events\HeaderContent.cshtml" />
+    <Content Include="Views\Events\Carousel.cshtml" />
     <Content Include="Views\Events\HomeContent.cshtml" />
     <Content Include="Views\Events\Layouts\Events.cshtml" />
     <Content Include="Views\Events\One-Column.cshtml" />

@@ -9,7 +9,7 @@ namespace events.tac.local.Business
 {
   public class CarouselProvider
   {
-    public static IEnumerable<Carousel> GetCarousels()
+    public IEnumerable<Carousel> GetCarousels()
     {
       var db = RenderingContext.Current.ContextItem.Database;
       var homeItem = db.GetItem(Sitecore.Context.Site.StartPath);
