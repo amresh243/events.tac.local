@@ -28,7 +28,7 @@ namespace events.tac.local.Business
           .Select(i => new NavigationItem
               (
                 title: i.DisplayName,
-                url: (i.TemplateID != Templates.Events) ? i.Url : string.Empty,
+                url: i.Url,
                 active: false
               )
             )

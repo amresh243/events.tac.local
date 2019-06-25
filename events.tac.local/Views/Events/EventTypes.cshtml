@@ -1,0 +1,26 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Links;
+@using events.tac.local.Business
+
+<section class="section section-full">
+  <!-- [Category List] -->
+  @{ var eventTypes = EventsProvider.GetEventTypes(); }
+  <ul class="block-grid-md-4 block-grid-sm-3 block-grid-xs-1">
+    @foreach (var eventItem in eventTypes)
+    {
+      string url = @LinkManager.GetItemUrl(eventItem);
+      <li>
+        <div class="thumbnail">
+          <a href="@url">
+            @Html.Sitecore().Field("DecorationBanner",  eventItem, new { @class = "img-responsive", mw = 500, mh = 333 })
+          </a>
+          <div class="caption">
+            <h3 class="teaser-heading">@eventItem.Name</h3>
+            <a href="@url" class="btn btn-default">Read more</a>
+          </div>
+        </div>
+      </li>
+    }
+  </ul>
+  <!-- [Category List] -->
+</section>

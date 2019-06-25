@@ -1,4 +1,5 @@
 ﻿using Sitecore.ContentSearch.SearchTypes;
+using Sitecore.Data;
 using Sitecore.Web.UI.WebControls;
 using System;
 using System.Web;

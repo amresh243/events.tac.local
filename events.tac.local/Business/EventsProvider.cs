@@ -1,7 +1,10 @@
 ﻿using events.tac.local.Models;
 using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.Linq;
+using Sitecore.Data.Fields;
+using Sitecore.Data.Items;
 using Sitecore.Mvc.Presentation;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace events.tac.local.Business
@@ -30,6 +33,22 @@ namespace events.tac.local.Business
           TotalResultCount = results.TotalSearchResults
         };
       }
+    }
+
+    public static IEnumerable<Item> GetEventTypes()
+    {
+      var db = RenderingContext.Current.ContextItem.Database;
+      var homeItem = db.GetItem(Sitecore.Context.Site.StartPath);
+      MultilistField events = homeItem.Fields["Events"];
+      return events.GetItems();
+    }
+
+    public Item GetTeasureEvent()
+    {
+      var db = RenderingContext.Current.ContextItem.Database;
+      var homeItem = db.GetItem(Sitecore.Context.Site.StartPath);
+      var address = (LookupField)homeItem.Fields["TeasureEvent"];
+      return address?.TargetItem;
     }
   }
 }

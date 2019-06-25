@@ -6,9 +6,10 @@
 
 <div class="content-list newslist">
   <ol class="media-list">
-    @{ string eventUrl = @Sitecore.Links.LinkManager.GetItemUrl(RenderingContext.Current.ContextItem); }
+    @{ var db = RenderingContext.Current.ContextItem.Database; }
     @foreach (var eventItem in Model.Events)
     {
+      string eventUrl = Sitecore.Links.LinkManager.GetItemUrl(db.GetItem(eventItem.Path));
       <li class="media media-align-middle">
         <div class="media-left">
           <a href="@eventUrl">@eventItem.EventImage</a>

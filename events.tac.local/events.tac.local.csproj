@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\BreadcrumbBuilder.cs" />
+    <Compile Include="Business\CarouselProvider.cs" />
     <Compile Include="Business\EventsProvider.cs" />
     <Compile Include="Business\NavigationBuilder.cs" />
     <Compile Include="Business\RelatedEventsProvider.cs" />
@@ -117,6 +118,8 @@
     <Compile Include="Controllers\EventsListController.cs" />
     <Compile Include="Controllers\NavigationController.cs" />
     <Compile Include="Controllers\RelatedEventsController.cs" />
+    <Compile Include="Helper\SitecoreHelper.cs" />
+    <Compile Include="Models\Carousel.cs" />
     <Compile Include="Models\EventDetails.cs" />
     <Compile Include="Models\EventIntro.cs" />
     <Compile Include="Models\EventsList.cs" />
@@ -183,6 +186,8 @@
     <Content Include="Views\Events\EventsList\Index.cshtml" />
     <Content Include="Views\Events\FeaturedEvent.cshtml" />
     <Content Include="Views\Events\FooterContent.cshtml" />
+    <Content Include="Views\Events\EventTypes.cshtml" />
+    <Content Include="Views\Events\HeaderContent.cshtml" />
     <Content Include="Views\Events\HomeContent.cshtml" />
     <Content Include="Views\Events\Layouts\Events.cshtml" />
     <Content Include="Views\Events\One-Column.cshtml" />
